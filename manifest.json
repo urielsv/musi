@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Musi",
+    "version": "1.0",
+    "description": "Modify the music pitch of a video or audio file, inspired by Transpose by CloudConvert",
+    "icons": {
+        "48": "icons/icon-512.png"
+    },
+    "permissions": ["activeTab"],
+    "browser_action": {
+        "default_title": "Musi",
+        "default_popup": "popup/popup.html",
+        "default_icon": "icons/icon-512.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.mozilla.org/*"],
+            "js": ["musi.js"]
+        }
+    ]
+}
